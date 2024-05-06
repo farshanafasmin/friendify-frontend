@@ -1,0 +1,75 @@
+<div class="main">
+    <div class="container" *ngIf="!editClicked">
+            <div class="col-lg-3"></div>
+        
+            <div class="col-lg-6 pro mt-5">
+                <h1 class="text-center">Profile</h1>
+        
+                <div class="image-container">
+                    <img class="img-fluid rounded" [src]="profilePic" alt="no image">
+                </div>
+                <h5 class="text-center">{{user?.username }}</h5>
+        
+                <div class="sim d-flex justify-content-space-between">
+                    <div>
+                        <h6><a routerLink="/view-following">Following</a></h6>
+                        <span>{{totalfollowing}}</span>
+                    </div>
+            
+                    <div>
+                        <h6><a routerLink="/view-followers">Followers</a></h6>
+                        <span>10</span>
+                    </div>
+            
+                    <div>
+                        <h6>Posts</h6>
+                        <span>{{ totalPosts }}</span>
+                    </div>
+                </div>
+        
+                <div class="d-flex justify-content-between ms-1 me-1"> 
+                    <button class="btn btn-dark mt-3 mb-5" (click)="editClick()">Edit Profile</button>
+                    <button class="btn btn-dark mt-3 mb-5" (click)="postClick()">Posts</button>
+                </div>
+        
+            </div>
+        
+            <div class="col-lg-3"></div>
+    </div>
+    
+    
+    <!-- -----------edit-------------- -->
+    
+    <div class="container-fluid  mb-5" *ngIf="editClicked">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <h1 class="text-center mt-5">Edit</h1>
+    
+                <div id="profile" class="pro text-center p-5">
+    
+                    <label for="p1">
+                        <input type="file" (change)="getFile($event)" style="display: none;" id='p1' >
+                        <img class="rounded" [src] ="profilePic" alt="no image">
+                    </label>
+                
+                    <div class="form-floating my-3">
+                        <input  type="email" name="e1" class="form-contol w-100" placeholder="Email" [(ngModel)]="user.email">
+                    </div>
+                
+                    <div class="form-floating">
+                        <input  type="text" name="p1" class="form-contol w-100" placeholder="Password"  [(ngModel)]="user.password">
+                    </div>
+                
+                
+                   <div class="d-flex justify-content-between" >
+                        <button class="btn btn-dark mt-2"  (click)="editUser()">Update</button>
+                        <button class="btn btn-dark ms-5 mt-2" (click)="cancelEdit()">Cancel</button>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-3"></div>
+        
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <h1 class="text-center mt-5">Edit post</h1>
+        <form #editForm="ngForm" >
+          <div class="mb-3">
+            <label for="p1">
+              <input type="file" (change)="getFile($event)" style="display: none;" id='p1'>
+              <img class="img-fluid rounded" [src]="userPost?.file" alt="no image">
+            </label>
+          </div>
+          <div class="form-floating mb-3 mt-5">
+            <label for="name" class="form-label">Caption</label>
+            <input type="text" class="form-control" name="caption" id="name" [(ngModel)]="userPost.caption" required>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-dark w-25" (click)="editpost() ">Update</button>
+            <button type="button" class="btn btn-dark w-25" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+  

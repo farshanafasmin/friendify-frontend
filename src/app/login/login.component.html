@@ -1,0 +1,36 @@
+
+
+<div class="container-fluid">
+
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-lg-6">
+    <h1 class="text-center">frendify</h1>
+
+            <div class="form mt-5">
+                <form [formGroup]="loginModel">
+                    <h2 class="text-center">Login Here</h2>
+                    <div class="mb-3 mt-5">
+                        <label for="exampleInputEmail2" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" formControlName="email" aria-describedby="emailHelp">
+                    </div>
+                    <div *ngIf="loginModel.get('email')?.errors && loginModel.get('email')?.touched">
+                        <p class="text-danger">Please enter a valid email</p>
+                      </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword2" class="form-label">Password</label>
+                        <input type="password" class="form-control" formControlName="password" id="exampleInputPassword2">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-25" (click)="login()">Sign In</button>
+                    </div>
+                    <div *ngIf="loginModel.get('password')?.errors && loginModel.get('password')?.touched">
+                        <p class="text-danger">Include characters, numbers, and spaces only</p>
+                      </div>
+                    <div class="div mt-2">
+                        <p><a routerLink="/register">Don't have an account? Please register here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

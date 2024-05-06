@@ -1,0 +1,30 @@
+
+
+.card .img{
+    height: 400px;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.card {
+    width: 48%; 
+    margin-bottom: 20px; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width:400px) {
+    .card{
+
+        width: 18rem;
+        margin-left:130px;
+    }
+}

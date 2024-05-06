@@ -1,0 +1,31 @@
+.container-fluid{
+    background-image: url('https://i.postimg.cc/cJbYKDP8/bglogin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+ height: 100vh;
+}
+
+form, .view {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(1, 1, 1, 0.8); 
+    padding: 20px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  .btn{
+    background-color: rgb(59, 137, 205);
+    color: white;
+  }

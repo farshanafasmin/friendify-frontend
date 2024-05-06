@@ -1,0 +1,22 @@
+<div class="m-5" *ngIf="followedUsers.length > 0; else noFollowedUsers">
+    <h1 class="text-center">Followed Users</h1>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let user of followedUsers">
+        <div class="card mb-3 text-center">
+          <img [src]="user.profile" alt="Profile Picture" class="card-img-top rounded-circle mt-1 ms-5 me-5" style="width: 170px; height: 170px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ user.username }}</h5>
+            <button class="btn follow btn-dark text-white ms-5 me-5" style="font-size: 12px;" (click)="unfollow(user)" >un follow</button>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  
+  <ng-template #noFollowedUsers>
+    <p>No followed users found.</p>
+  </ng-template>
+  

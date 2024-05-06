@@ -1,0 +1,38 @@
+h1, p {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .container-fluid {
+    background-image: url('https://i.postimg.cc/cJbYKDP8/bglogin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+ height: 100vh;
+   
+}
+
+p {
+    font-size: 26px;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+
+p:nth-child(2) br + *::first-letter {
+    margin-right: 1.5em; 
+}
+
+p:nth-child(3) br + *::first-letter {
+    margin-right: 3em; 
+}
+
+p:nth-child(4) br + *::first-letter {
+    margin-right: 2em; 
+}
+
+p:nth-child(5) br + *::first-letter {
+    margin-right: 2.5em; 
+}

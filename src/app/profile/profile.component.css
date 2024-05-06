@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+
+  .sim {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+  }
+  
+  .sim > div {
+    text-align: center; 
+    flex: 1; 
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .pro{
+    box-shadow: 0 0 10px rgba(15, 14, 14, 1); 
+    border-radius: 15px;
+  }
+
+  .main{
+    background-image: url('https://i.postimg.cc/cJbYKDP8/bglogin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+ height: 100vh;
+  }
+
+  input{
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }

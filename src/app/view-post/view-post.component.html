@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="ms-5 mt-5 text-center">Your Feeds</h2>
+    <div class="post-container d-flex flex-wrap">
+        <div class="card ms-2 mb-2" *ngFor="let i of userPosts">
+            <img [src]="i.file" class="img img-fluid mt-2" alt="no image">
+            <div class="card-body">
+                <p class="card-text">{{i.caption}}</p>
+               
+                
+                <div class="d-flex justify-content-between ms-1 me-1"> 
+
+                <button class="btn btn-dark"><a routerLink="/edit-post/{{i._id}}">Edit Post</a></button>
+                <button class=" btn btn-dark" (click)="deletePost(i._id)">Delete Post</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

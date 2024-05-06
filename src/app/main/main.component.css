@@ -1,0 +1,131 @@
+.container-fluid{
+    background-color: gainsboro;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.links{
+    background-color: rgb(244, 241, 237);
+    height: 150px;
+    width: 250px;
+    height: 230px;
+}
+
+.view{
+    box-shadow: 0 0 3px; 
+    border-radius: 5px;
+
+}
+
+.card{
+    width: 38rem;
+}
+
+.card .img{
+    height: 400px;
+}
+
+@media (max-width:400px) {
+    .card{
+
+        width: 18rem;
+    }
+}
+
+h5{
+    background-color: whitesmoke;
+    height: 30px;
+    /* text-align: center; */
+    justify-content: center;
+}
+
+.follow{
+    width: 70px;
+    height: 30px;
+}
+
+.simg{
+    width: 60px;
+    height: 50px;
+}
+
+.peoples{
+    background-color: white;
+    margin-left: -40px;
+    width: 22rem;
+    }
+
+    @media (max-width:400px) {
+        .peoples{
+    
+          margin-left: 0px;
+        }
+    }
+
+
+    .unfollow{
+        width:100px;
+        height: 30px;
+    }
+
+    ul li{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .scrollable {
+        height: 100vh; 
+        overflow-y: scroll;
+    }
+    
+    /* Hide scrollbar for Chrome */
+    .scrollable::-webkit-scrollbar {
+        display: none;
+    }
+
+  
+      
+      .centered-search{
+       
+        padding: 8px;
+        border: 5px solid #ccc;
+        border-radius: 25px !important;
+      }
+      
+      .centered-search::placeholder {
+        color: black; 
+      }
+
+      .liked-icon {
+        color: red; /* Set the color to red when liked */
+      }
+
+      i{
+        font-size: 22px;
+      }
+
+      .comments-section {
+        max-height: 150px; /* Adjust as needed */
+        overflow-y: auto;
+      }
+      
+      .comment {
+        margin-bottom: 8px;
+      }
+      .form-control{
+        border: none;
+        border-bottom: 1px solid #ced4da; /* Adjust color as needed */
+        border-radius: 0;
+        outline: none; /* Remove outline */
+      }
+     
